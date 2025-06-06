@@ -14,44 +14,112 @@
 </head>
 
 <body>
-  <form>
-    <div class="container-fluid">
-      <nav class="navbar bg-light- mt-3"
-        style="font-size: x-large; border: 0.1px solid gray ;  background-color: rgb(236, 235, 235)">
-
-        <span class="navbar-text">
-          <h1>Payment form example</h1>
-        </span>
-      </nav>
-      <form class="row g-3 mt-3">
-        <fieldset disabled>
-          <div class="mb-3-bs-danger mt-3">
-            <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input"
-              style="width:100%; height:60px;">
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h2>Payment form example</h2>
+      </div>
+      <div class="card-body">
+        <div class="alert alert-danger" role="alert">
+          Some fields are missing
+        </div>
+        <form class="row g-3">
+          <div class="col-md-6">
+            <label for="card" class="form-label">Card#</label>
+            <input type="text" class="form-control" id="card" placeholder="XXXXXXXXXXXXXXXXX">
           </div>
-        </fieldset>
-      </form>
-    </div>
-    <div class="col-md-4 mt-3">
-      <label for="inputPassword6" class="col-form-label">Card#</label>
-      <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
-    </div>
-    <div class=" col-md-2 mt-3">
-      <label for="inputPassword6" class="col-form-label">CVC#</label>
-      <div class="col-auto">
-        <input type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+          <div class="col-md-2">
+            <label for="cvc" class="form-label">CVC#</label>
+            <input type="number" class="form-control" id="cvc" placeholder="0000">
+          </div>
+          <div class="col-md-4">
+            <label for="amount" class="form-label">Amount</label>
+            <input type="number" class="form-control" id="amount" placeholder="Amount">
+          </div>
+          <div class="col-6">
+            <label for="firstname" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="firstname">
+          </div>
+          <div class="col-6">
+            <label for="lastname" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="lastname">
+          </div>
+          <div class="col-md-6">
+            <label for="inputCity" class="form-label">City</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label">State</label>
+            <select id="inputState" class="form-select">
+              <option selected>Pick a state</option>
+              <option>Argentina</option>
+              <option>Ecuador</option>
+              <option>España</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="postal-code" class="form-label">Postal Code</label>
+            <input type="text" class="form-control" id="postal-code">
+          </div>
+          <div class="form-floating" style="display:flex; justify-content: flex-end">
+
+            <textarea class="form-control" aria-label="With textarea" style=" height:70px; width: 50%;"></textarea>
+
+          </div>
+          <div class="d-flex">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="icono2" id="icono2" checked>
+              <label class="form-check-label" for="icono2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-credit-card-2-front-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2.5 1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm0 3a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1zm3 0a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1z" />
+                </svg>
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="icono3" id="icono3">
+              <label class="form-check-label" for="icono3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-credit-card-2-front" viewBox="0 0 16 16">
+                  <path
+                    d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z" />
+                  <path
+                    d="M2 5.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5m3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5m3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5m3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5" />
+                </svg>
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="icono4" id="icono4" checked>
+              <label class="form-check-label" for="icono4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-credit-card-2-back-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5H0zm11.5 1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM0 11v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1z" />
+                </svg>
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="icono1" id="icono1">
+              <label class="form-check-label" for="icono1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-credit-card-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1H0zm0 3v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7zm3 2h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1" />
+                </svg>
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="card-footer text-body-secondary" style="display:flex; justify-content: flex-end;">
+
+        <button type="button" class="btn btn-secondary">Cancel</button>
+        <button type="button" class="btn btn-primary">Send</button>
+
       </div>
     </div>
-    <div class=" col-md-4 row">
-      <label for="inputPassword6" class="col-form-label">Amount</label>
-      <div class="col-auto">
-        <label for="inputPassword" class="col-form-label">$</label>
-      </div>
-      <div class="col-auto">
-        <input type="text" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
-      </div>
-    </div>
-  </form>
+  </div>
 </body>
 
 </html>
